@@ -7,7 +7,6 @@ on:
     branches: [ "master", "preparation" ]
   workflow_dispatch:
 
-  
 jobs:
   semgrep:
     name: semgrep
@@ -15,7 +14,5 @@ jobs:
     container:
       image: returntocorp/semgrep
     step:
-    -name: FetchSourceCode
-     uses: actions/checkout@v3
     -name: Semgrep 
      run: semgrep ci --config=auto
