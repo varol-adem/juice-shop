@@ -14,5 +14,7 @@ jobs:
     container:
       image: returntocorp/semgrep
     step:
-    -name: Semgrep 
+    -name: FetchSourceCode
+     uses: actions/checkout@v3
+    -name: Semgrep
      run: semgrep ci --config=auto
